@@ -1,0 +1,93 @@
+
+
+
+  body{
+
+    margin: 0;
+    height: 100%;
+    max-width: 100%;
+    overflow-x:hidden;
+
+
+  }
+
+  .nav-wrapper{
+    background-color: rgb(22, 71, 238);
+  }
+
+
+
+  /*The Search form  styling*/
+
+.searchbx input{
+  width: 80%;
+  margin-left: 5%;
+  height: 30px;
+  border-radius: 5px;
+  border-color:#D2E3F8;
+  margin-bottom: 30px;
+}
+.searchbx button{
+  height: 30px;
+  background-color:#1647EE;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+  /*The Search form  styling ends*/
+
+  .sidebar{
+    float:right;
+    background-color: white;
+    height:50%;
+    margin-bottom: 10px;
+  }
+
+   .sidebar .sidebar1{
+    margin-bottom: 30px;
+    background-color: #D2E3F8;
+  }
+
+  .sidebar .sidebar2{
+   margin-top: 30px;
+   background-color: #D2E3F8;;
+ }
+
+ .forum-container{
+     background-color: #D2E3F8;
+     height: 1000px;
+     /* width: 772px; */
+
+
+
+ }
+
+.tbl {
+margin-top: 55px;
+}
+.forum-container .forum-tables .tbl tr td{
+
+  border: 2px solid black;
+  margin-bottom: 15px;
+}
+
+.forum-container .forum-tables .tbl tr #prof {
+
+  height: 100px;
+  column-span: all;
+
+}
+.forum-container .forum-tables .tbl tr #numb-comments{
+
+  height: 100px;
+  column-span: all;
+
+}
+
+.forum-container .forum-tables .tbl tr #fortitle{
+
+  height: 100px;
+  column-span: all;
+
+}
