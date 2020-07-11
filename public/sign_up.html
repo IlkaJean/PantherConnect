@@ -1,0 +1,52 @@
+<html>
+
+<head>
+
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/LoginPage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ 
+    <!-- <link rel="stylesheet" href="css/sign_up.css"> -->
+        <script src="js/signup.js"></script>
+</head>
+
+<body>
+    <div id="bc">
+        <a id="home" href="PantherConnect.html">PantherConnect</a>
+
+    </div>
+
+    <div id="id01" class="signupform">
+
+        <form class="modal-content" id="signup_form" onsubmit="return false;">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter Full Name" name="name" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+
+            </div>
+            <div class="d-none alert alert-danger" id="error_signup">Sorry, we could not create the user</div>
+            <div class="clearfix">
+                <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> -->
+                <button type = "button" onclick="signup()" class="signupbtn">Sign Up</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+
+</html>

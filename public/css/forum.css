@@ -57,37 +57,10 @@
  .forum-container{
      background-color: #D2E3F8;
      height: 1000px;
-     /* width: 772px; */
+      /* width: 772px;  */
 
 
 
  }
 
-.tbl {
-margin-top: 55px;
-}
-.forum-container .forum-tables .tbl tr td{
-
-  border: 2px solid black;
-  margin-bottom: 15px;
-}
-
-.forum-container .forum-tables .tbl tr #prof {
-
-  height: 100px;
-  column-span: all;
-
-}
-.forum-container .forum-tables .tbl tr #numb-comments{
-
-  height: 100px;
-  column-span: all;
-
-}
-
-.forum-container .forum-tables .tbl tr #fortitle{
-
-  height: 100px;
-  column-span: all;
-
-}
+ 
