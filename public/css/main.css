@@ -16,19 +16,29 @@
 
 }
 
+.nav-wrapper{
+  line-height: normal;
+  background-color: rgb(22, 71, 238);
+}
+
 .not{
   float: right;
   margin-top: 0;
 }
 
 /* Navigation links */
-.navbar a {
-  float: left;
+.cnavbar div.subnav-content a {
+  float: right;
   font-size: 16px;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+.subnavbtn a{
+  text-decoration: none;
+  color: white;
 }
 
 /* The subnavigation menu */

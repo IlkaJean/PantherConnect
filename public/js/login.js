@@ -17,6 +17,7 @@ function login(){
         body: JSON.stringify(userLogin)
     }).then(res => res.json()).then(data =>{
         if(data.message=="Success"){
+            localStorage.setItem("user", JSON.stringify(data.user));
             window.location.href = "PantherConnect.html";
         }else{
             document.getElementById("login_error").classList.remove("d-none");

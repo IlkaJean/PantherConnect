@@ -33,7 +33,7 @@ router.post('/login', (req, res, next) =>{
         if (!user) { return next(err);}
         req.logIn(user, function(err) {
             if (err) { return next(err); }
-            return res.send({message:"Success"});
+            return res.send({message:"Success", user: req.user});
           });
         })(req, res, next);
 })
@@ -41,7 +41,7 @@ router.post('/login', (req, res, next) =>{
 // Logout
 router.get('/logout', (req, res) => {
     req.logout();
-    res.send({message: 'Successful logout'})
+    res.send({message: 'Success'})
 });
 
 router.get('/users', ensureAuthenticated('admin'), (req, res) =>{
