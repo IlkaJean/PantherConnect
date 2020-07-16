@@ -4,12 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>STEM Forum</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/forum.css">
   <script src="js/main.js"></script>
-  <script src="js/PanterConnect.js"></script>
+  <script src="js/forum.js"></script>
 </head>
 
 <body>
@@ -30,7 +29,7 @@
               <a href="#company">Settings</a>
               <a href="#team">GSU Services</a>
               <a href="#team">About</a>
-              <a href="#careers">Log Out</a>
+              <a href="#" id="logout" onclick="logout()">Log Out</a>
             </div>
           </div>
           <div class="subnav">
@@ -45,10 +44,10 @@
           <div class="subnav">
             <button class="subnavbtn">Tutoring <i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-              <a href="#link1">Drop-In</a>
-              <a href="#link2">Appointments</a>
-              <a href="#link3">Express</a>
-              <a href="#link4">Link 4</a>
+              <a href="#link1">GSU Resources</a>
+        <!-- <a href="#link2">Appointments</a> -->
+              <a href="#link3">Appointments</a>
+              <a href="#link4">Drop-In</a>
             </div>
           </div>
 
@@ -77,7 +76,8 @@
     </form>
 
     <!--The Search form -->
-    <div class="row ">
+    <div class="row">
+      <h1 class="d-none" id="not_auth">You are not authorized</h1>
       <!--Forums sidebar widget -->
       <div class="sidebar col-lg-3 col-md-4">
 
@@ -131,21 +131,10 @@
 
       <div class="forum-container col-lg-9 col-md-8">
 
+        <div id="forum-list">
 
-        <div class="thread-container row no-gutters">
-          <div class="col-lg-2 col-sm-6 order-lg-1 order-1">
-            <div class="alert alert-success">1.small user</div>
-          </div>
-          <div class="col-lg-8 order-lg-2 col-md-12 order-3 alert alert-success">
-            2. wide content
-          </div>
-          <div class="col-lg-2 col-sm-6 order-lg-3 order-2 alert alert-success">
-            3. small date
-          </div>
-          
-          
+
         </div>
-
       </div>
 
       <!--forum div ends-->

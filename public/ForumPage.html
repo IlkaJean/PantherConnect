@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Liberal Arts Forum</title>
+  <title>Forum Page</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/forum.css">
   <script src="js/main.js"></script>
-  <script src="js/forum.js"></script>
+  <script src="js/forumpage.js"></script>
 </head>
 
 <body>
@@ -130,7 +130,12 @@
       <!--forum div-->
 
       <div class="forum-container col-lg-9 col-md-8">
-
+        <div>
+          <h5>Create New Thread</h5>
+          <input type="text" class="form-control" id="thread-name-input" placeholder="Thread Name">
+          <textarea name="thread-text" id="thread-text" cols="100" rows="10" class="form-control"></textarea>
+          <button type="button" class="btn btn-primary" onclick="createThread()">Create</button>
+        </div>
         <div id="forum-list">
 
 

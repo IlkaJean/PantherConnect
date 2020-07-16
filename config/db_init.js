@@ -22,7 +22,7 @@ module.exports = function (callback) { //how you share some stuff between diff m
         db.run(`create table if not exists "forums"(
                 "name" TEXT,
                 "id" INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-                "description" TEXT
+                "description" TEXT,
                 "branch_id" INTEGER
 
                 );`);
@@ -31,18 +31,18 @@ module.exports = function (callback) { //how you share some stuff between diff m
         db.run(`create table if not exists "threads"(
                 "name" TEXT,
                 "id" INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-                "text" TEXT
-                "forum_id" INTEGER
-                "creator_id" INTEGER
-                "date_created" INTEGER
+                "text" TEXT,
+                "forum_id" INTEGER,
+                "creator_id" INTEGER,
+                "date_created" timestamp default(strftime('%s', 'now'))
 
                 );`);
 
         db.run(`create table if not exists "comments"(
                 "id" INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
-                "text" TEXT
-                "thread_id" INTEGER
-                "date_created" INTEGER
+                "text" TEXT,
+                "thread_id" INTEGER,
+                "date_created" timestamp default(strftime('%s', 'now')),
                 "creator_id" INTEGER
 
                 );`, (res)=>{

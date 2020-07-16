@@ -23,9 +23,24 @@ function login(){
             document.getElementById("login_error").classList.remove("d-none");
         }
     })
-    
-
-
-
-
 }
+
+function docReady(fn) {
+    console.log("executed")
+    // see if DOM is already available
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        // call on next available tick
+        setTimeout(fn, 1);
+    } else {
+        document.addEventListener("DOMContentLoaded", fn);
+    }
+}
+
+docReady(function() {
+    fetch("/api/v1/users/isloggedin").then((res)=>res.json()).then((data)=>{
+        if(data && data.name){
+            window.location.href="PantherConnect.html";
+        }
+    })
+    
+});

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/forum.css">
   <script src="js/main.js"></script>
+  <script src="js/forum.js"></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
               <a href="#company">Settings</a>
               <a href="#team">GSU Services</a>
               <a href="#team">About</a>
-              <a href="#careers">Log Out</a>
+              <a href="#" id="logout" onclick="logout()">Log Out</a>
             </div>
           </div>
           <div class="subnav">
@@ -43,10 +44,10 @@
           <div class="subnav">
             <button class="subnavbtn">Tutoring <i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-              <a href="#link1">Drop-In</a>
-              <a href="#link2">Appointments</a>
-              <a href="#link3">Express</a>
-              <a href="#link4">Link 4</a>
+              <a href="#link1">GSU Resources</a>
+        <!-- <a href="#link2">Appointments</a> -->
+              <a href="#link3">Appointments</a>
+              <a href="#link4">Drop-In</a>
             </div>
           </div>
 
@@ -76,6 +77,7 @@
 
     <!--The Search form -->
     <div class="row">
+      <h1 class="d-none" id="not_auth">You are not authorized</h1>
       <!--Forums sidebar widget -->
       <div class="sidebar col-lg-3 col-md-4">
 
@@ -129,24 +131,8 @@
 
       <div class="forum-container col-lg-9 col-md-8">
 
-        <div class="forum-tables">
+        <div id="forum-list">
 
-          <h1>Business Forum is in da house, puppies!</h1>
-          <table class="tbl">
-            <tr>
-              <td id="prof">Id Profile</td>
-              <td id="fortitle">Forum name</td>
-              <td id="numb-comments">Number of comments</td>
-            </tr>
-
-            <tr>
-              <td id="prof">Id Profile</td>
-              <td id="fortitle">Forum name</td>
-              <td id="numb-comments">Number of comments</td>
-            </tr>
-
-
-          </table>
 
         </div>
       </div>

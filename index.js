@@ -1,6 +1,10 @@
 var express = require("express"); // import express library
 var path = require("path");
-var loginAPI = require("./login/loginAPI");
+var loginAPI = require("./api/loginAPI");
+var threadAPI = require("./api/threadAPI");
+var forumAPI = require("./api/forumAPI");
+var commentAPI = require("./api/commentAPI");
+const { ensureAuthenticated}  = require('./config/auth');
 const passport = require("passport");
 const session = require("express-session");
 
@@ -64,6 +68,10 @@ app.delete('/api/v1/comment/:id', (req, res) =>{
 
 
 app.use("/api/v1/users/", loginAPI);
+app.use("/api/v1/threads/", ensureAuthenticated('user'), threadAPI);
+app.use("/api/v1/forums/", ensureAuthenticated('user'), forumAPI);
+app.use("/api/v1/comments/", ensureAuthenticated('user'), commentAPI);
+
 
 var init_db = require("./config/db_init"); //import db_init file
 

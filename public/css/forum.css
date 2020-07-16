@@ -53,11 +53,28 @@
 
  .forum-container{
      background-color: #D2E3F8;
-     height: 1000px;
+     /* height: 1000px; */
       /* width: 772px;  */
-
+    padding-bottom: 40px;
 
 
  }
 
+ .thread-container{
+   margin-bottom: 7px;
+   /* white-space: pre-wrap; */
+ }
+
+ .thread-container div{
+   margin: initial;
+ }
  
+ #thread-body{
+   margin-bottom: 30px;
+   /* white-space: pre-wrap; */
+ }
+
+ .text-body-wrap{
+  white-space: pre-wrap;
+ }
+
